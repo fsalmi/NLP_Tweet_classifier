@@ -1,0 +1,7 @@
+virtualenv
+pandas
+numpy
+scikit-learn
+requests
+nltk
+Flask 

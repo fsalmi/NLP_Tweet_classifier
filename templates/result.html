@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<header>
+            <div>
+                    My app: 
+                    <a href="/">New tweet</a>
+                    
+                    </div>
+                    <hr>
+
+		
+	</header>
+	<p style="color:rgb(12, 145, 101);font-size:20;text-align: center;"><b>Classification of the tweet</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 0%}
+    <h2 style="color:rgb(167, 14, 14);">It is a racist tweet</h2>
+    {% elif prediction == 1%}
+	<h2 style="color:rgb(219, 77, 77);">It is a hateful tweet </h2>
+	{% elif prediction == 2%}
+	<h2 style="color:rgb(24, 24, 175);">This tweet not hateful nor racist</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
